@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
-  def add_score(score)
+  def add_score(score = 0)
     if session['score'].nil?
-      session['score'] = 0
+      session['score'] = score
     else
       session['score'] += score
     end

@@ -3,7 +3,7 @@ require 'open-uri'
 
 class GamesController < ApplicationController
   def new
-    add_score(0)
+    add_score
     @letters = ('A'..'Z').to_a.sample(10)
     @string = @letters.join('').upcase
   end
